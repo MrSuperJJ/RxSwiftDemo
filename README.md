@@ -1,2 +1,0 @@
-# RxSwiftDemo
-MVC -> MVVM
