@@ -12,6 +12,8 @@ import RxCocoa
 
 class ViewController: UIViewController {
 
+    // 在MVC中，ViewController担任View和Controller双重角色
+    // 在MVVM中，ViewController只担任View的角色
     @IBOutlet weak var usernameTextFiled: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var resultLabel: UILabel!
@@ -73,11 +75,11 @@ extension ViewController: UITextFieldDelegate {
             switch textField.tag {
             case TextFieldTag.username.rawValue:
                 if let text = passwordTextField.text {
-                    resultLabel.text = ValidatedModel.sharedInstance.validatedUsername(currentText) + text
+                    resultLabel.text = ValidatedModel.sharedInstance.combine(ValidatedModel.sharedInstance.validatedUsername(currentText), text)
                 }
             case TextFieldTag.password.rawValue:
                 if let text = usernameTextFiled.text {
-                    resultLabel.text = text + ValidatedModel.sharedInstance.validatedPassword(currentText)
+                    resultLabel.text = ValidatedModel.sharedInstance.combine(text, ValidatedModel.sharedInstance.validatedPassword(currentText))
                 }
             default:
                 break

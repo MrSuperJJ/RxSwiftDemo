@@ -75,10 +75,10 @@
 		C7701EB91F171A6F006EDEF7 /* RxSwiftDemo */ = {
 			isa = PBXGroup;
 			children = (
-				C7BDD2C21F5D51F400841034 /* Protocols.swift */,
-				C7BDD2CC1F5D539300841034 /* ValidatedModel.swift */,
 				C7701EBA1F171A6F006EDEF7 /* AppDelegate.swift */,
 				C7701EBC1F171A6F006EDEF7 /* ViewController.swift */,
+				C7BDD2C21F5D51F400841034 /* Protocols.swift */,
+				C7BDD2CC1F5D539300841034 /* ValidatedModel.swift */,
 				C7BDD2B91F5D4C0A00841034 /* MVVM */,
 				C7BDD2CE1F5D56F300841034 /* Supporting Files */,
 			);

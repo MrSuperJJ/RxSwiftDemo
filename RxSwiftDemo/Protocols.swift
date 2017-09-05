@@ -20,5 +20,6 @@ enum LoginResult {
 protocol ValidatedModelType {
     func validatedUsername(_ username: String) -> String
     func validatedPassword(_ password: String) -> String
+    func combine(_ username: String, _ password: String) -> String
     func login(_ username: String, _ password: String) -> LoginResult
 }

@@ -23,6 +23,10 @@ struct ValidatedModel:ValidatedModelType {
         return password.lowercased()
     }
     
+    func combine(_ username: String, _ password: String) -> String {
+        return username + password
+    }
+    
     func login(_ username: String, _ password: String) -> LoginResult {
         guard username.characters.count > 3 else { return .invalidatedUsername }
         guard password.characters.count > 3 else { return .invalidatedPassword }
